@@ -33,9 +33,9 @@ body {
 }
 
 h2 {
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: lightgray;
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightgrey;
     color: #fff;
 }
 
@@ -84,4 +84,8 @@ video {
     display: flex;
     gap: 20px; /* espaço entre os cards */
     flex-wrap: wrap; /* quebra linha se não couber */
+}
+
+nav ul li {
+    background-color: white;
 }
