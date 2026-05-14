@@ -21,6 +21,13 @@ p {
     width: 500;
 }
 
+.card{
+    background:#2a2a2a;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+  }
+
 header {
     padding: 10px;
 }
@@ -30,6 +37,8 @@ body {
     background-color: white;
     overflow-x:hidden;
     font-family:Arial, sans-serif;
+    color:white;
+    padding:20px;
 }
 
 h2 {
