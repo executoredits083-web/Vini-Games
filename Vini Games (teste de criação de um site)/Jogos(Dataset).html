@@ -1,48 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/modificador.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
 
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/modificador.css">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+
+      /* imagem de fundo */
+      background-image: url("imagem/fundo.png");
+
+      /* ajusta a imagem na tela */
+      background-size: cover;
+
+      /* centraliza */
+      background-position: center;
+
+      /* evita repetição */
+      background-repeat: no-repeat;
+
+      /* fixa a imagem ao rolar */
+      background-attachment: fixed;
+
+      font-family: Arial, sans-serif;
+      color: black;
+    }
+
+    .conteudo {
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+
+      text-shadow:
+        0 0 10px black,
+        0 0 20px gray,
+        0 0 40px lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
     <nav>
-        <a href="index.html">
-          <img src="imagem/ChatGPT Image 27 de abr. de 2026, 19_06_31.png" width="500px">
-        </a>
-      </nav>
-      <img src="imagem/ChatGPT Image 11 de mai. de 2026, 19_41_20.png" width="450px">
-    </header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Inicio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Jogos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <a href="index.html">
+        <img src="imagem/ChatGPT Image 27 de abr. de 2026, 19_06_31.png" width="500px">
+      </a>
     </nav>
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="Jogos(Dataset).html" class="nav-link">Jogos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Formularios</a></li>
+      </ul>
+    </header>
     <main>
+      <div class="conteudo">
+      </div>
+      <img src="imagem/ChatGPT Image 20 de mai. de 2026, 19_38_30.png" width="700px">
+      <h1>APROVEITE CADA MINUTO</h1>
+      <table class="table table-striped">
+
+        <tr>
+          <th>Jogo</th>
+          <th>Plataforma</th>
+        </tr>
+
+        <!-- LINHA COM LINK -->
+        <tr onclick="window.location='https://jogostorrent.io/download/grand-theft-auto-v-gta-5-legacy/'">
+          <td>GTA V</td>
+          <td>PC</td>
+        </tr>
+
+        <tr onclick="window.location='https://jogostorrent.io/download/grand-theft-auto-v-gta-5-legacy/'">
+          <td>God of War</td>
+          <td>PC</td>
+        </tr>
+
+        <tr onclick="window.location='https://www.xbox.com/'">
+          <td>Forza Horizon 5</td>
+          <td>PC</td>
+        </tr>
+
+        <tr onclick="window.location='https://jogostorrent.io/download/grand-theft-auto-v-gta-5-legacy/'">
+          <td>GTA V</td>
+          <td>PC</td>
+        </tr>
+
+        <tr onclick="window.location='https://jogostorrent.io/download/grand-theft-auto-v-gta-5-legacy/'">
+          <td>God of War</td>
+          <td>PC</td>
+        </tr>
+
+        <tr onclick="window.location='https://www.xbox.com/'">
+          <td>Forza Horizon 5</td>
+          <td>PC</td>
+        </tr>
+
+      </table>
     </main>
+
+    <script>
+
+      const linhas = document.querySelectorAll("#tabelaJogos tr");
+
+      linhas.forEach((linha, index) => {
+
+        // evita selecionar o cabeçalho
+        if (index !== 0) {
+
+          linha.addEventListener("click", () => {
+
+            linha.classList.toggle("selecionado");
+
+          });
+
+        }
+
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
 </body>
+
 </html>

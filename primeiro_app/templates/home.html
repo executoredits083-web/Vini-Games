@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Meu Projeto Django{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1> Bem vindo a nosa pagina inicial </h1>
+    <p> Este e um exemplo simples de pagina inicial em Django </p>
+    <img src="{% static '/img/praia.jpg' %}" alt="Imagem de uma praia" class="img-fluid"/>
+  </div>
+{% endblock %}
