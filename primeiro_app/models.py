@@ -1,21 +1,21 @@
 from django.db import models
 
 
-class Serviço(models.Model):
+class Servico(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
-    preco = models.DecimalField(max_length==10)
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
     ativo = models.BooleanField(default=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.nome
-# Create your models here.
+
 
 class Perfil(models.Model):
     nome = models.CharField(max_length=100)
-    email = models.EmailFeld()
-    foto = models.ImageField(upload_to='fotos_oerfil/', null=True)
+    email = models.EmailField()
+    foto = models.ImageField(upload_to='fotos_perfil/', null=True, blank=True)
     telefone = models.CharField(max_length=20)
 
-    _str_(nome):
-    return
+    def __str__(self):
+        return self.nome

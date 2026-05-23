@@ -189,3 +189,18 @@ h4 {
     text-align: center;
     font-size: 50px;
 }
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 100px;
+    color: white;
+    text-shadow:
+        0 0 10px black,
+        0 0 20px gray,
+        0 0 40px lightgray;
+    background-color: #fff;
+}
+
+span {
+    color: white;
+}

@@ -1,16 +1,22 @@
-#Importa a função HttpResponse
+# Importa a função HttpResponse
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from primeiro_app.forms import PerfilForm
+
 
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
-def sobre(rrquest):
+
+def sobre(request):
     return render(request, 'sobre.html')
+
 
 def contato(request):
     return render(request, 'contato.html')
+
 
 def criar_perfil(request):
     if request.method == 'POST':
@@ -18,7 +24,8 @@ def criar_perfil(request):
 
         if form.is_valid():
             form.save()
-            return HttpResponse('Perfil criado')
+            return HttpResponse('Perfil criado com sucesso!')
     else:
-            form = PerfilForm()
-    return render(request, 'criar_perfil.html', ('form': form))
+        form = PerfilForm()
+
+    return render(request, 'criar_perfil.html', {'form': form})
